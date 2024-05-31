@@ -1,0 +1,13 @@
+.App {
+   width: 100%;
+}
+
+.container {
+   max-width: 1400px !important;
+   margin: auto;
+}
+
+.full-width {
+   max-width: 2000px;
+   margin: auto;
+}

@@ -1,0 +1,23 @@
+header {
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 35px;
+}
+
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+nav .logo {
+   width: 140px;
+}
+
+.nav-links {
+   display: flex;
+   align-items: center;
+   width: 590px;
+   justify-content: space-between
+}

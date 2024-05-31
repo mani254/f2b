@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+   --primary-color: #0068C1;
+   --secondary-color: #0099DD;
+   --primary-radius: 10px;
+   --secondary-radius: 20px;
+   --black: #000000;
+   --white: #ffffff;
+}
+
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   font-family: "Inter", sans-serif;
+   font-weight: 400;
+   font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'HalenoirCompact-DemiBold', sans-serif;
+}
+
+h1 {
+   font-size: 51px;
+}
+
+ul {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+section {
+   overflow: hidden;
+}
+
+.p-relative {
+   position: relative;
+}

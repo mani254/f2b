@@ -1,0 +1,32 @@
+.button {
+   display: block;
+   padding: 13px 40px;
+   border-radius: var(--primary-radius);
+   background: var(--primary-color);
+   font-weight: 600;
+   color: var(--white);
+   display: flex;
+   align-items: center;
+}
+
+.button span {
+   color: inherit;
+   font-weight: 400;
+   font-size: inherit;
+}
+
+.button .icon {
+   margin-left: 10px;
+   margin-top: 7px;
+   color: inherit;
+}
+
+
+.button.variant-1 {
+   border: 1.5px solid var(--primary-color);
+   background: transparent;
+}
+
+.text-link {
+   font-size: 16px;
+}

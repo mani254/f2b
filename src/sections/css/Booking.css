@@ -1,0 +1,12 @@
+.booking {
+   margin-top: -100px;
+   position: relative;
+   z-index: 10;
+}
+
+.booking .content {
+   padding: 80px;
+   background: linear-gradient(to right, white 30%, #cceefb 100%);
+   border-radius: var(--secondary-radius);
+   box-shadow: 0px 0px 50px 1px #0040FF1A;
+}
