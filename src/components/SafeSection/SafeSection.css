@@ -1,0 +1,132 @@
+.safe-section {
+   position: relative;
+   overflow: hidden;
+}
+
+.safe-section::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: #FFF2C5;
+   width: max(30%, 250px);
+   height: 150px;
+   z-index: -1;
+   border-radius: 50%;
+   filter: blur(100px);
+}
+
+.safe-section::after {
+   content: '';
+   position: absolute;
+   bottom: 0px;
+   right: 0px;
+   width: 250px;
+   height: 250px;
+   transform: translate(30%, 50%);
+   background: #00FFD9;
+   z-index: -1;
+   border-radius: 50%;
+   filter: blur(150px);
+}
+
+.safe-section .card {
+   width: 100%;
+   height: 300px;
+   border-radius: var(--secondary-radius);
+   /* border: 1px solid black; */
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   padding: 20px;
+   padding-bottom: 33px;
+   position: relative;
+   box-shadow: 0px 0px 5px 0.5px #0001;
+   background: white;
+}
+
+.safe-section .card .content {
+   padding-top: 120px !important;
+   height: 100%;
+   position: relative;
+   z-index: 3;
+}
+
+.safe-section .card::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 50%;
+   transform: translate(-30%, 0%);
+   background: #FBF0FF;
+   border-bottom-right-radius: 80%;
+   filter: blur(35px);
+}
+
+.safe-section .card::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   transform: translate(0%, 60%);
+   background: #FEFBEC;
+   filter: blur(45px);
+   z-index: 0;
+}
+
+.safe-section .card-1::before {
+   background: #FEFBEC;
+}
+
+.safe-section .card-2::before {
+   background: #F0FFFF;
+}
+
+.safe-section .card-3::before {
+   background: #FEFBEC;
+}
+
+.safe-section .card-4::before {
+   background: #F0FFFF;
+}
+
+.safe-section .card-1::after {
+   background: #F0FFFF;
+}
+
+.safe-section .card-2::after {
+   background: #FBF0FF;
+}
+
+.safe-section .card-3::after {
+   background: #F0FFFF;
+}
+
+.safe-section .card-4::after {
+   background: #FBF0FF;
+}
+
+.custom-navigation {
+   position: absolute;
+   top: 50%;
+   left: 0px;
+   z-index: 10;
+   width: calc(100% + 50px);
+   transform: translate(-25px, -50%);
+}
+
+.custom-navigation span {
+   width: 40px;
+   height: 40px;
+   background: var(--primary-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   color: var(--white);
+}

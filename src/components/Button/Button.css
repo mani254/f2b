@@ -1,13 +1,16 @@
 .button {
-   display: block;
    padding: 13px 40px;
    border-radius: var(--primary-radius);
    background: var(--primary-color);
    font-weight: 600;
    color: var(--white);
-   display: flex;
+   display: inline-flex;
    align-items: center;
 }
+
+/* .button * {
+   flex-grow: 0;
+} */
 
 .button span {
    color: inherit;
