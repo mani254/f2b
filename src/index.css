@@ -46,6 +46,8 @@ h3 {
    font-weight: 400;
 }
 
+
+
 span {
    font-size: inherit;
    font-weight: inherit;
@@ -66,6 +68,12 @@ section {
 
 .p-relative {
    position: relative;
+}
+
+.background-cover {
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
 }
 
 .sec-padding {

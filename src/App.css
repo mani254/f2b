@@ -12,3 +12,35 @@
    margin: auto;
 }
 
+.ship-section {
+   width: 100%;
+   height: 550px;
+   background-image: url('./assets/home/ship-image.png');
+   background-position: right bottom;
+}
+
+
+/* csss for the moving boat section */
+
+.boat-section {
+   overflow: visible;
+}
+
+.boat-wrapper {
+   width: calc(100% + 80px);
+   height: 400px;
+   background: green;
+   transform: rotate(-13deg);
+   transform-origin: left bottom;
+   position: relative;
+   background: linear-gradient(to top, #fffbe7, #0000)
+}
+
+.boat-wrapper img {
+   width: 35vw;
+   transform: rotate(20deg);
+   position: absolute;
+   top: 130px;
+   right: 0;
+}
+
