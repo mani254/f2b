@@ -8,6 +8,9 @@ import ShippingSection from "./sections/ShippingSection";
 import SpreadSection from "./sections/SpreadSection";
 import MoveBoatSection from "./sections/MoveBoatSection";
 import Section from "./sections/Section";
+import LatestProjects from "./sections/LatestProjects";
+import SpecializeSection from "./sections/SpecializeSection.jsx";
+import PricingSection from "./sections/PricingSection.jsx";
 
 import "./App.css";
 import ContainerSection from "./sections/ContainerSection";
@@ -23,6 +26,9 @@ const App = () => {
 			<Section className="ship-section background-cover mt-5"></Section>
 			<SpreadSection />
 			<MoveBoatSection />
+			<LatestProjects />
+			<SpecializeSection />
+			<PricingSection />
 
 			<ContainerSection className="sec-padding "></ContainerSection>
 		</div>

@@ -13,4 +13,34 @@ import shipEveryWhere from '../assets/home/ship-everywhere.png'
 import onTimeDelivary from '../assets/home/on-time-delivary.png'
 import boatImage from '../assets/home/boat-image.png'
 
-export { logo, homeImage, heroBackground, aboutImage, videoIcon, ShippingImage, support, safePackage, shipEveryWhere, onTimeDelivary, globalTracking, boatImage };
+import flightImage from '../assets/home/flight.png'
+
+import pricingImage from '../assets/home/pricing-image.png'
+
+import listIcon from '../assets/home/list-icon.png'
+import hube from '../assets/home/hube.png'
+import dpd from '../assets/home/dpd.png'
+import global from '../assets/home/global.png'
+import expressDelivery from '../assets/home/express-delivery.png'
+
+export {
+   logo,
+   homeImage,
+   heroBackground,
+   aboutImage,
+   videoIcon,
+   ShippingImage,
+   support,
+   safePackage,
+   shipEveryWhere,
+   onTimeDelivary,
+   globalTracking,
+   boatImage,
+   flightImage,
+   pricingImage,
+   listIcon,
+   hube,
+   expressDelivery,
+   dpd,
+   global
+};

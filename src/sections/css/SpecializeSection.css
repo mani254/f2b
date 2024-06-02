@@ -1,0 +1,22 @@
+.spec-counters {
+   width: 100%;
+   height: 400px;
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+.spec-counters .s-counter::after {
+   display: none;
+}
+
+.flight-image {
+   position: absolute;
+   height: 100%;
+}
+
+.flight-image img {
+   height: 100%;
+   position: relative;
+   left: 35%;
+}
