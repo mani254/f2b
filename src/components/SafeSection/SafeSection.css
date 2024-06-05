@@ -47,10 +47,13 @@
 }
 
 .safe-section .card .content {
-   padding-top: 120px !important;
-   height: 100%;
    position: relative;
    z-index: 3;
+}
+
+.safe-section .card img {
+   position: relative;
+   z-index: 20;
 }
 
 .safe-section .card::before {
@@ -129,4 +132,14 @@
    justify-content: center;
    border-radius: 50%;
    color: var(--white);
+   cursor: pointer;
+}
+
+@media only screen and (max-width:768px) {
+   .custom-navigation {
+      max-width: 110px;
+      top: 108%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+   }
 }

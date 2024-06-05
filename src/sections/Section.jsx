@@ -1,8 +1,8 @@
 import React from "react";
 
-function Section({ children, ...props }) {
+function Section({ children, ref, ...props }) {
 	return (
-		<section {...props}>
+		<section ref={ref} {...props}>
 			<div className="full-width">{children}</div>
 		</section>
 	);

@@ -36,12 +36,13 @@ h6 {
    font-family: 'HalenoirCompact-DemiBold', sans-serif;
 }
 
-h1 {
+h1,
+h1 * {
    font-size: 51px;
 }
 
-
-h2 {
+h2,
+h2 * {
    font-size: 38px;
    font-weight: 600;
 }
@@ -58,6 +59,17 @@ h4 {
    font-weight: 400;
 }
 
+h6 {
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.m-heading {
+   font-size: 16px;
+   font-family: 'HalenoirCompact-Medium', sans-serif;
+   font-weight: 600;
+   ;
+}
 
 span {
    font-size: inherit;
@@ -71,10 +83,15 @@ ul {
 
 a {
    text-decoration: none;
+   cursor: pointer;
 }
 
 section {
    overflow: hidden;
+}
+
+.d-none {
+   display: none;
 }
 
 .w-100 {
@@ -120,4 +137,53 @@ section {
 
 .text-center {
    text-align: center;
+}
+
+.heading {
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.fade-heading {
+   opacity: 1;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+
+@media only screen and (max-width:1200px) {
+   .heading {
+      font-size: 42px;
+      line-height: 58px !important;
+   }
+
+   .sec-title {
+      font-size: 34px
+   }
+}
+
+@media only screen and (max-width:992px) {
+   .heading {
+      font-size: 35px;
+      line-height: 52px !important;
+   }
+
+   .sec-title {
+      font-size: 32px;
+   }
+
+   * {
+      font-size: 17px;
+   }
+
+}
+
+@media only screen and (max-width:575px) {
+   .sec-title {
+      font-size: 28px;
+   }
 }

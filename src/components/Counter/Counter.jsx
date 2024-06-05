@@ -1,33 +1,48 @@
-// src/Counter.js
+import React, { useState, useEffect, useRef } from "react";
 
-import React, { useState, useEffect } from "react";
-
-function Counter({ startValue, endValue, duration }) {
-	const totalSteps = 100; // Define how many steps you want in the total duration
-	const increment = Math.round((endValue - startValue) / totalSteps); // Calculate the increment and round to nearest integer
-	const stepDuration = duration / totalSteps; // Calculate the step duration
+function Counter({ startValue, endValue, duration = 3 }) {
+	const totalSteps = 100;
+	const totalChange = endValue - startValue;
+	const increment = totalChange / totalSteps;
 
 	const [currentValue, setCurrentValue] = useState(startValue);
+	const [counterStarted, setCounterStarted] = useState(false);
+	const counterRef = useRef(null);
 
 	useEffect(() => {
-		const interval = setInterval(() => {
-			setCurrentValue((prevValue) => {
-				const newValue = prevValue + increment;
-				if ((increment > 0 && newValue >= endValue) || (increment < 0 && newValue <= endValue)) {
-					clearInterval(interval);
-					return endValue;
-				}
-				return newValue;
-			});
-		}, stepDuration);
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting && !counterStarted) {
+					setCounterStarted(true);
+					const startTime = Date.now();
+					const endTime = startTime + duration * 1000;
 
-		return () => clearInterval(interval);
-	}, [startValue, endValue, increment, stepDuration]);
+					const updateInterval = setInterval(() => {
+						const elapsedTime = Date.now() - startTime;
+						const progress = elapsedTime / (endTime - startTime);
+
+						if (progress >= 1) {
+							setCurrentValue(endValue);
+							clearInterval(updateInterval);
+						} else {
+							setCurrentValue(startValue + totalChange * progress);
+						}
+					}, duration * 10);
+
+					return () => clearInterval(updateInterval);
+				}
+			});
+		});
+
+		observer.observe(counterRef.current);
+
+		return () => observer.disconnect();
+	}, [startValue, endValue, duration, totalChange, counterStarted]);
 
 	return (
-		<>
+		<div ref={counterRef}>
 			<span>{Math.round(currentValue)}</span>
-		</>
+		</div>
 	);
 }
 

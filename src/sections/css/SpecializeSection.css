@@ -4,10 +4,22 @@
    display: flex;
    align-items: center;
    position: relative;
+   /* margin-right: 40px; */
+   padding-left: 30px;
 }
 
 .spec-counters .s-counter::after {
    display: none;
+}
+
+.spec-counters .s-counter {
+   border-right: 2px solid var(--primary-color);
+   width: 100%;
+   padding-right: 20px;
+}
+
+.last .s-counter {
+   border-right: none !important;
 }
 
 .flight-image {
@@ -18,5 +30,15 @@
 .flight-image img {
    height: 100%;
    position: relative;
-   left: 35%;
+   transform: translateX(-100%);
+}
+
+@media only screen and (max-width:992px) {
+   .second .s-counter {
+      border: none;
+   }
+
+   .spec-counters {
+      height: 350px;
+   }
 }

@@ -1,0 +1,30 @@
+footer {
+   background: var(--primary-color);
+   color: var(--white);
+}
+
+footer a {
+   color: white;
+   font-size: 16px;
+}
+
+footer ul li {
+   margin-top: 20px;
+}
+
+.footer-wrapper {
+   border-bottom: 1px solid var(--white);
+}
+
+footer .icons-wrapper .icon {
+   margin-right: 15px;
+   font-size: 22px;
+}
+
+footer img {
+   width: min(100%, 200px);
+}
+
+footer .copyright {
+   font-weight: 300;
+}

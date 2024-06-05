@@ -1,0 +1,133 @@
+.checkout-section {
+   margin-top: 60px;
+}
+
+.tabs-wrapper .tab {
+   padding: 15px 30px;
+}
+
+
+
+.checkout-section .tabs-wrapper {
+   border: 1px solid black;
+   border-radius: var(--secondary-radius);
+}
+
+.tabs-wrapper .tab-1 p {
+   height: 40px;
+   opacity: 0;
+}
+
+.tabs-wrapper .tab {
+   border-radius: var(--secondary-radius);
+   overflow: hidden;
+}
+
+.checkout-section .tabs-wrapper img {
+   width: 40px;
+   height: 40px;
+   margin-right: 10px;
+}
+
+.tabs-wrapper .active {
+   background: var(--primary-color);
+}
+
+.checkout-section .info-wrapper span {
+   margin-right: 10px;
+   padding: 0px 8px;
+   border-right: 1px solid var(--black);
+   font-weight: 500;
+}
+
+.checkout-section .info-wrapper span:nth-child(4) {
+   border: none;
+}
+
+.checkout-section .info-wrapper span:last-child {
+   font-weight: 600;
+   border: none;
+   color: var(--secondary-color);
+   cursor: pointer;
+
+}
+
+.single-service {
+   background: green;
+   border-radius: var(--secondary-radius);
+   position: relative;
+   overflow: hidden;
+}
+
+.single-service p {
+   font-size: 15px;
+}
+
+.services-title {
+   font-size: 35px;
+   font-weight: 600;
+   ;
+}
+
+.single-service .day-count {
+   font-size: 25px;
+   font-weight: 500;
+}
+
+.single-service .type {
+   font-size: 25px;
+   font-weight: 500;
+}
+
+.single-service .date {
+   font-weight: 600;
+}
+
+.single-service .value {
+   font-size: 30px;
+   font-weight: 600;
+}
+
+.single-service .till-date {
+   margin-right: -26px;
+   background: #BDFFF5;
+   padding: 1px 10px;
+   border-top-left-radius: 20px;
+   border-bottom-left-radius: 20px;
+}
+
+
+.single-service .button {
+   border: none;
+   font-weight: 400;
+}
+
+.single-service .top {
+   border-bottom: 1px solid #0007;
+   ;
+}
+
+.single-service img {
+   width: 40px;
+}
+
+.single-service .details .price {
+   width: 50%;
+   border-right: 1px solid black;
+}
+
+.services-wrapper .col-lg-4:nth-child(1) .single-service {
+   background: linear-gradient(140deg, #F1D1FF80 10%, #f1d1ff40 40%, #fff 80%, #FFF2C560);
+}
+
+.services-wrapper .col-lg-4:nth-child(2) .single-service {
+   background: linear-gradient(140deg, #FFF2C580 10%, #FFF2C540 30%, #fff 50%, #F1D1FF80);
+}
+
+.services-wrapper .col-lg-4:nth-child(3) .single-service {
+   background: linear-gradient(140deg, #F1D1FF80 10%, #F1D1FF40 30%, #fff 50%, #E6FFFF80);
+}
+
+.services-wrapper .col-lg-4:nth-child(4) .single-service {
+   background: linear-gradient(140deg, #f4fffd 10%, #DFDFDF40 30%, #fff 50%, #FFF2C580);
+}

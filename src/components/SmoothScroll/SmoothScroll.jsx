@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SmoothScroll = ({ children, smoothness = 0.7 }) => {
+const SmoothScroll = ({ children, smoothness = 1.5 }) => {
 	const contentRef = useRef(null);
 	const viewportRef = useRef(null);
 

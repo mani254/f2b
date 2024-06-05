@@ -1,0 +1,20 @@
+.cta {
+   height: 460px;
+   background: url('../../assets/home/cta-background.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: var(--white);
+}
+
+.sub-form {
+   max-width: 500px;
+   margin: auto;
+}
+
+.sub-form .button {
+   position: absolute;
+   right: 0;
+   border: none;
+   height: 100%;
+}

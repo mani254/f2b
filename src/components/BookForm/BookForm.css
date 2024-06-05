@@ -22,3 +22,28 @@
    top: 50%;
    transform: translate(0%, -50%);
 }
+
+.add-icon {
+   width: 35px;
+   height: 35px;
+   background: var(--primary-color);
+   border-radius: 50%;
+   color: var(--white);
+   font-size: 20px;
+   font-weight: 600;
+   margin: auto;
+   cursor: pointer;
+}
+
+.delete-icon {
+   color: rgb(227, 48, 48);
+   position: absolute;
+   cursor: pointer;
+   right: -10px;
+}
+
+.delete-icon svg {
+   font-size: 25px;
+   align-self: center;
+   margin-top: 25px;
+}

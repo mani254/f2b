@@ -27,20 +27,62 @@
 }
 
 .boat-wrapper {
-   width: calc(100% + 80px);
+   width: 110%;
    height: 400px;
-   background: green;
    transform: rotate(-13deg);
    transform-origin: left bottom;
    position: relative;
    background: linear-gradient(to top, #fffbe7, #0000)
 }
 
+.App {
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+}
+
 .boat-wrapper img {
-   width: 35vw;
-   transform: rotate(20deg);
+   width: 43vw;
+   transform: translateX(-80px) rotate(20deg);
    position: absolute;
    top: 130px;
    right: 0;
 }
 
+@media only screen and (max-width:1400px) {
+   .boat-wrapper img {
+      transform: translateX(-20px) rotate(20deg);
+   }
+}
+
+@media only screen and (max-width:992px) {
+   .boat-wrapper img {
+      width: 47vw;
+      top: 180px;
+      transform: translateX(-20px) rotate(20deg);
+   }
+}
+
+@media only screen and (max-width:762px) {
+   .boat-wrapper {
+      height: 300px;
+   }
+
+   .boat-wrapper img {
+      width: 50vw;
+      top: 150px;
+      transform: translateX(-20px) rotate(20deg);
+   }
+}
+
+@media only screen and (max-width:560px) {
+   .boat-wrapper {
+      height: 240px;
+   }
+
+   .boat-wrapper img {
+      width: 50vw;
+      top: 150px;
+      transform: translateX(-20px) rotate(20deg);
+   }
+}

@@ -63,3 +63,24 @@
 .spread-card.card-5 {
    background: linear-gradient(125deg, #FDFBED, #B8FFF3)
 }
+
+@media only screen and (max-width:992px) {
+   .ship-section {
+      height: 400px;
+   }
+
+   .spread-sec .content-card {
+      background: #00FFD9;
+      padding: 70px 30px;
+      border-radius: var(--secondary-radius);
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin: auto;
+      margin-top: -100px;
+   }
+
+   .spread-sec .spread-card {
+      height: 200px;
+   }
+}

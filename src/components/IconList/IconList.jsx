@@ -1,10 +1,10 @@
 import React from "react";
 import "./IconList.css";
 
-function IconList({ listArray = [], icon = null, ...props }) {
+function IconList({ listArray = [], refValue, icon = null, ...props }) {
 	return (
 		<div {...props}>
-			<ul className={icon ? "icon-list" : ""}>
+			<ul className={icon ? "icon-list" : ""} ref={refValue}>
 				{listArray.map((content, index) => (
 					<li key={index}>
 						{icon && <img className="icon" src={icon} alt="list-icon" />}

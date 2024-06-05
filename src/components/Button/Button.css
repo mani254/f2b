@@ -8,14 +8,11 @@
    align-items: center;
 }
 
-/* .button * {
-   flex-grow: 0;
-} */
-
 .button span {
    color: inherit;
    font-weight: 400;
    font-size: inherit;
+   flex-shrink: 0;
 }
 
 .button .icon {
@@ -24,7 +21,6 @@
    color: inherit;
 }
 
-
 .button.variant-1 {
    border: 1.5px solid var(--primary-color);
    background: transparent;
@@ -32,4 +28,22 @@
 
 .text-link {
    font-size: 16px;
+}
+
+@media only screen and (max-width:1200px) {
+   .button {
+      padding: 10px 15px;
+   }
+}
+
+@media only screen and (max-width:992px) {
+   .button {
+      padding: 10px 15px;
+   }
+}
+
+@media only screen and (max-width:992px) {
+   .button span {
+      font-size: 16px;
+   }
 }

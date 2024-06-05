@@ -1,37 +1,30 @@
-import React from "react";
-import Navbar from "./components/Navbar/Navbar";
-import BannerSection from "./sections/BannerSection";
-import BookingSection from "./sections/BookingSection";
-import AboutSection from "./sections/aboutSection";
-import SafeSection from "./components/SafeSection/SafeSection";
-import ShippingSection from "./sections/ShippingSection";
-import SpreadSection from "./sections/SpreadSection";
-import MoveBoatSection from "./sections/MoveBoatSection";
-import Section from "./sections/Section";
-import LatestProjects from "./sections/LatestProjects";
-import SpecializeSection from "./sections/SpecializeSection.jsx";
-import PricingSection from "./sections/PricingSection.jsx";
+import React, { useEffect } from "react";
 
 import "./App.css";
-import ContainerSection from "./sections/ContainerSection";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage.jsx";
+import CheckOutPage from "./pages/CheckOutPage.jsx";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SmoothScroll from "./components/SmoothScroll/SmoothScroll.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const App = () => {
 	return (
-		<div className="App">
+		<>
 			<Navbar />
-			<BannerSection />
-			<BookingSection />
-			<AboutSection />
-			<SafeSection />
-			<ShippingSection />
-			<Section className="ship-section background-cover mt-5"></Section>
-			<SpreadSection />
-			<MoveBoatSection />
-			<LatestProjects />
-			<SpecializeSection />
-			<PricingSection />
-
-			<ContainerSection className="sec-padding "></ContainerSection>
-		</div>
+			<SmoothScroll>
+				<div className="App">
+					<Routes>
+						<Route path="/" element={<HomePage />} />
+						<Route path="/checkOut" element={<CheckOutPage />} />
+					</Routes>
+				</div>
+			</SmoothScroll>
+		</>
 	);
 };
 

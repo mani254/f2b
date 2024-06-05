@@ -12,3 +12,10 @@ select {
    border: none;
    outline: none;
 }
+
+input.variant-2 {
+   width: 100%;
+   height: 100%;
+   background: white;
+   outline: none;
+}

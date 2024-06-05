@@ -9,25 +9,51 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import SafeCard from "./SafeCard.jsx";
 
+import { airGif, truckGif, trainGif, shipGif } from "../../utils/index.js";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 const cardData = [
-	{ title: "Air Freight", content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
-	{ title: "Ship Freight", content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
-	{ title: "Road Transport", content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
-	{ title: "Railway Logistic", content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
-	{ title: "Heavy Transport", content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
+	{ title: "Air Freight", image: airGif, content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
+	{ title: "Ship Freight", image: shipGif, content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
+	{ title: "Road Transport", image: truckGif, content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
+	{ title: "Railway Logistic", image: trainGif, content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
+	{ title: "Ship Transport", image: shipGif, content: "Wherever your cargo we can arrange the shipment for you and remain competitive" },
 ];
 
 function SafeSection() {
 	const navigationPrevRef2 = React.useRef(null);
 	const navigationNextRef2 = React.useRef(null);
 
+	const headingRef = React.useRef(null);
+
+	useGSAP(() => {
+		gsap.fromTo(
+			headingRef.current,
+			{ opacity: 0, y: 50 },
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.5,
+				ease: "ease-out",
+				scrollTrigger: {
+					trigger: ".safe-section",
+					start: "top 70%",
+					toggleActions: "play none none none",
+				},
+			}
+		);
+	});
+
 	return (
 		<ContainerSection className="safe-section sec-padding">
-			<h2 className="sec-title mb-4 text-center">
+			<h2 className="sec-title mb-4 text-center" ref={headingRef}>
 				Safe & Reliable <span>Cargo Solutions</span>
 			</h2>
 
@@ -44,7 +70,7 @@ function SafeSection() {
 				<Swiper
 					modules={[Navigation, A11y, Autoplay]}
 					spaceBetween={10}
-					slidesPerView={4}
+					slidesPerView={1}
 					navigation={{
 						prevEl: navigationPrevRef2.current,
 						nextEl: navigationNextRef2.current,
@@ -53,7 +79,7 @@ function SafeSection() {
 					autoplay={{ delay: 2000, disableOnInteraction: false }}
 					breakpoints={{
 						480: {
-							slidesPerView: 1,
+							slidesPerView: 2,
 							spaceBetween: 20,
 						},
 						768: {
