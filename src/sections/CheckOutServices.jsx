@@ -4,7 +4,7 @@ import Button from "../components/Button/Button.jsx";
 
 function CheckOutServices({ selected }) {
 	return (
-		<div className="mt-4 mt-md-0 ">
+		<div className="mt-4">
 			<p className="services-title mb-5">4 services found, from £6,061.02</p>
 			<div className="row  gy-4 services-wrapper">
 				{selected.map((service, index) => {

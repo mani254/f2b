@@ -22,6 +22,10 @@
    overflow-x: scroll;
 }
 
+.tabs-wrapper::-webkit-scrollbar {
+   display: none;
+}
+
 .tabs-container p {
    flex-shrink: 0;
 }

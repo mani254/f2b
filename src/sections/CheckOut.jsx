@@ -45,7 +45,7 @@ function CheckOut() {
 					<span>Edit</span>
 				</div>
 				<div className="tabs-container">
-					<div className="tabs-wrapper d-flex mt-3 mt-md-0 mt-md-0 align-items-center">
+					<div className="tabs-wrapper d-flex mt-3 mt-md-4 align-items-center">
 						<div className={`tab1 tab d-flex align-items-center ${activeTab === "all" ? "active" : ""}`} onClick={() => handleTabClick("all")}>
 							<p>.</p>All
 						</div>
