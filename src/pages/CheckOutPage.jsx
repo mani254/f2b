@@ -10,7 +10,7 @@ function CheckOutPage() {
 		<>
 			{/* <Navbar /> */}
 			<CheckOut />
-			<CheckOutServices />
+
 			<CallToAction />
 			<Footer />
 		</>
